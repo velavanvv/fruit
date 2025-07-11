@@ -14,8 +14,8 @@ const FruitListing = () => {
   useEffect(() => {
     const fetchData = async () => {
       const [fruitsRes, categoriesRes] = await Promise.all([
-        api.get('/fruits'),
-        api.get('/categories')
+        api.getFruits(),
+        api.getCategories()
       ]);
       setFruits(fruitsRes.data);
       setCategories(categoriesRes.data);
